@@ -38,7 +38,33 @@ import Bell from 'vue-material-design-icons/Bell.vue';
         >
       </div>
     </div>
-  <!-- <RouterView /> -->
+
+    <div
+      id="SideNav"
+      class="fixed w-[240px] bg-[#191922] h-[100vh] border-r border-r-[#32323D]"
+    >
+      <div class="w-full pl-6 pt-3 cursor-pointer">
+        <RouterLink to="/" class="text-white">
+          Deezer
+        </RouterLink>
+      </div>
+
+      <div class="mt-[53px]"></div>
+
+      //MenuSection
+
+      <div class="text-[#A2A2AD] font-light text-[12px] pl-[62px] mt-[25px]">
+        <div class="py-[9px] hover:text-[#EF5465] cursor-pointer">Favorite tracks</div>
+        <div class="py-[9px] hover:text-[#EF5465] cursor-pointer">Playlist</div>
+        <div class="py-[9px] hover:text-[#EF5465] cursor-pointer">Albums</div>
+        <div class="py-[9px] hover:text-[#EF5465] cursor-pointer">Artists</div>
+        <div class="py-[9px] hover:text-[#EF5465] cursor-pointer">Podcasts</div>
+      </div>
+    </div>
+
+    <div class="fixed w-[calc(100%-240px)] h-[calc(100%-56px)] ml-[240px] mt-[56px] overflow-x-auto">
+      <!-- <RouterView /> -->
+    </div>
 </template>
 
 
