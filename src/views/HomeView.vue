@@ -2,6 +2,7 @@
 import MixesInspiredBy from '../components/MixesInspiredBy.vue';
 import MultiArtistSelect from '../components/MultiArtistSelect.vue';
 import CustomCarousel from '../components/CustomCarousel.vue';
+import HighLights from '../components/HighLights.vue';
 </script>
 
 <template>
@@ -189,6 +190,31 @@ import CustomCarousel from '../components/CustomCarousel.vue';
           { url: 'https://picsum.photos/id/239/300/300', song: 'Music From Montana Story', by: 'Kevin Morby', releasedOn: '10/01/2023' },
         ]"
       />
+    </div>
+
+    <div class="px-8 mt-8 min-w-[800px]">
+      <div class="text-white text-xl font-semibold inline-block">
+        HighLights
+      </div>
+
+      <div class="py-3"></div>
+
+      <div class="flex items-center gap-8">
+        <div class="rounded-lg w-1/2">
+          <HighLights 
+            by="Some Artist 1"
+            song="Awsome Song for you!"
+            image="https://picsum.photos/id/177/800/300"
+          />
+        </div>
+        <div class="rounded-lg w-1/2">
+          <HighLights 
+            by="Some Artist 2"
+            song="Another banger BRUV!"
+            image="https://picsum.photos/id/229/800/300"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
