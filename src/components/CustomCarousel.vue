@@ -71,7 +71,7 @@ const slideTo = (val) => {
             :transition="800"
             snapAlign="start"
        >
-            <Slide v-for="slide in data" :key="slide" class="flex items-baseline text-white">
+            <Slide v-for="slide in data" :key="slide" class="flex items-baseline">
                 <SliderItem :slide="slide" />
             </Slide>
        </Carousel>
