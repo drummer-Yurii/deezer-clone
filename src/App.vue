@@ -3,7 +3,6 @@ import { RouterLink, RouterView } from 'vue-router';
 
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import Bell from 'vue-material-design-icons/Bell.vue';
-
 import SideMenuItem from './components/SideMenuItem.vue';
 
 </script>
@@ -53,10 +52,10 @@ import SideMenuItem from './components/SideMenuItem.vue';
 
       <div class="mt-[53px]"></div>
 
-      <SideMenuItem iconStrin="music" :iconSize="20" pageUrl="/" name="Music" />
-      <SideMenuItem iconStrin="podcast" :iconSize="20" pageUrl="/podcasts" name="Podcasts" />
-      <SideMenuItem iconStrin="explore" :iconSize="20" pageUrl="/artist" name="Explore" />
-      <SideMenuItem iconStrin="favourite" :iconSize="20" pageUrl="/favourite" name="Favourites" />
+      <SideMenuItem iconString="music" :iconSize="20" pageUrl="/" name="Music" />
+      <SideMenuItem iconString="podcast" :iconSize="20" pageUrl="/podcasts" name="Podcasts" />
+      <SideMenuItem iconString="explore" :iconSize="20" pageUrl="/artist" name="Explore" />
+      <SideMenuItem iconString="favourite" :iconSize="20" pageUrl="/favourite" name="Favourites" />
 
       <div class="text-[#A2A2AD] font-light text-[12px] pl-[62px] mt-[25px]">
         <div class="py-[9px] hover:text-[#EF5465] cursor-pointer">Favorite tracks</div>
