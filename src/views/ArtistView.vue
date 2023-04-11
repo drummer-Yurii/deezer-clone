@@ -6,6 +6,11 @@ import DotsHorizontal from 'vue-material-design-icons/DotsHorizontal.vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import ClockTimeFiveOutline from 'vue-material-design-icons/ClockTimeFiveOutline.vue';
 import artist from '../artist.json';
+
+import { useSongStore } from '../stores/song';
+import { storeToRefs } from 'pinia';
+const useSong = useSongStore();
+const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong); 
 </script>
 
 <template>
