@@ -1,9 +1,22 @@
 <script setup>
+import { onBeforeMount } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import Bell from 'vue-material-design-icons/Bell.vue';
 import SideMenuItem from './components/SideMenuItem.vue';
+import MusicPlayer from './components/MusicPlayer.vue';
+
+import { useSongStore } from './stores/song';
+import { storeToRefs } from 'pinia';
+const useSong = useSongStore();
+const { isPlaying, currentTrack, trackTime, isLyrics } = storeToRefs(useSong);
+
+onBeforeMount(() => {
+  isPlaying.value = false
+  isLyrics.value = false
+  trackTime.value = '0:00'
+})
 
 </script>
 
@@ -69,6 +82,8 @@ import SideMenuItem from './components/SideMenuItem.vue';
     <div class="fixed w-[calc(100%-240px)] h-[calc(100%-56px)] ml-[240px] mt-[56px] overflow-x-auto">
       <RouterView />
     </div>
+
+    <MusicPlayer v-if="currentTrack" />
 </template>
 
 
