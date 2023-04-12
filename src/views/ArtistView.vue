@@ -1,4 +1,6 @@
 <script setup>
+import SongRow from '../components/SongRow.vue';
+
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
@@ -111,8 +113,8 @@ const playFunc = () => {
       <ClockTimeFiveOutline fillColor="#aeaeae" :size="20" />
     </div>
 
-    <ul class="w-full mx-8 pr-16 min-w-[650px] text-white" v-for="track in artist.tracks" :key="track">
-      {{ track }}
+    <ul class="w-full mx-8 pr-16 min-w-[650px]" v-for="track in artist.tracks" :key="track">
+      <SongRow v-if="track" :track="track" />
     </ul>
   </div>
 </template>
